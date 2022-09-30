@@ -18,8 +18,6 @@ export class CiCdAwsPipelineDemoStack extends cdk.Stack {
       })
     });
 
-
-
     const testingStage = pipeline.addStage(new MyPipelineAppStage(this, "test", {
       env: { account: "680947997479", region: "us-west-2" }
     }));
