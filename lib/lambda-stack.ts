@@ -13,7 +13,7 @@ export class MyLambdaStack extends cdk.Stack {
           lambda.Runtime.NODEJS_14_X,
         ],
         code: lambda.Code.fromAsset(path.join(__dirname, 'lambda/layers')),
-        description: 'multiplies a number by 2',
+        description: 'multiplies a number by 2*2*2',
       });
 
       new lambda.Function(this, 'LambdaFunction', {
