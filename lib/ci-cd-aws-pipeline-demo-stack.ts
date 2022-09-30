@@ -22,7 +22,6 @@ export class CiCdAwsPipelineDemoStack extends cdk.Stack {
       env: { account: "680947997479", region: "us-west-2" }
     }));
 
-
     testingStage.addPre(new ShellStep("Run Unit Tests", { commands: ['npm install', 'npm test'] }));
     testingStage.addPost(new ManualApprovalStep('Manual approval before production'));
 
